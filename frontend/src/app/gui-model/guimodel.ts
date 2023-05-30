@@ -87,6 +87,32 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "NewForm",
+                    "title": "Neues Modul",
+                    "formFieldList": [
+                        {
+                            "id": "firstName",
+                            "type": "text",
+                            "name": "Vorname",
+                            "required": true
+                        },
+                        {
+                            "id": "lastName",
+                            "type": "text",
+                            "name": "Nachname",
+                            "required": true
+                        }, 
+                        {
+                            "type": "cancelButton",
+                            "name": "Abbrechen"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Erstellen"
+                        }
+                    ]
+                }
             ],
             "pageList": [
                 {
@@ -107,6 +133,17 @@ export class GuiModel {
                             "width": 2,
                             "newRow": true,
                         },
+                        // New tile added below
+                        {
+                            "type": "button",
+                            "name": { default: "Neue Person" },
+                            "icon": "fa-plus",
+                            "color": "blue",
+                            "width": 2,
+                            "form" : {
+                                "form" : "NewForm"
+                            }
+                        }
                     ]
                 },
                 {
@@ -134,6 +171,17 @@ export class GuiModel {
                             "url": "/todo",
                             "form": {
                                 "form": "ToDoForm"
+                            }
+                        },
+                        // New tile added below
+                        {
+                            "type": "button",
+                            "name": { default: "Neue Person" },
+                            "icon": "fa-plus",
+                            "color": "blue",
+                            "width": 2,
+                            "form" : {
+                                "form" : "NewForm"
                             }
                         }
                     ]
