@@ -12,4 +12,12 @@ public class ArithmeticSumTest {
         Assertions.assertEquals(1, as.calculate(1));
 
     }
+
+    @Test
+    public void arithmeticSumCalculator2() {
+
+        ArithmeticSum as = new ArithmeticSum();
+        Assertions.assertEquals(3, as.calculate(2));
+
+    }
 }
