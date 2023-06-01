@@ -89,7 +89,7 @@ export class GuiModel {
                 },
                 {
                     "id": "NewForm",
-                    "title": "Neues Modul",
+                    "title": "Neue Person",
                     "formFieldList": [
                         {
                             "id": "firstName",
