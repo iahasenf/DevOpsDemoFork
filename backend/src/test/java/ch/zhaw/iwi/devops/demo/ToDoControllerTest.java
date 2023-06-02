@@ -23,18 +23,28 @@ public class ToDoControllerTest {
         assertEquals("ToDo app is up and running!", controller.test());
     }
 
-    /*@Test
-    public void testCreateTodo() {
+    @Test
+    public void testPing() {
         ToDoController controller = new ToDoController();
-        ToDo todo = new ToDo(1, "Test Todo", "This is a test todo");
+        String result = controller.ping();
+        String expectedResponse = "{ \"status\": \"ok\", \"userId\": \"admin\", \"languageCode\": \"de\",\"version\": \"0.0.1\"}";
+        Assertions.assertEquals(expectedResponse, result);
+    }
 
-        controller.createTodo(todo);
-        ToDo createdTodo = controller.getTodo(1);
+    @Test
+    public void testGetTodo() {
+        ToDoController controller = new ToDoController();
+        controller.init(); // Initialize todos
 
-        Assertions.assertEquals(1, createdTodo.getId());
-        Assertions.assertEquals("Test Todo", createdTodo.getTitle());
-        Assertions.assertEquals("This is a test todo", createdTodo.getDescription());
+        ToDo todo = controller.getTodo(1);
 
-    }*/
+        // Assert
+        Assertions.assertEquals(1, todo.getId());
+        Assertions.assertEquals("Neuer Job", todo.getTitle());
+        Assertions.assertEquals("5 DevOps Engineers einstellen", todo.getDescription());
+
+    }
+
+    
 
 }
