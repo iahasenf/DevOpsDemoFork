@@ -23,7 +23,6 @@ public class PersonController {
         this.persons.put(1, new Person(1, "Barack Obama"));
         this.persons.put(2, new Person(2, "Donald Trump"));
         this.persons.put(3, new Person(3, "Joe Biden"));
-        System.out.println("Init Data");
     }
 
     @GetMapping("/person/{id}")
