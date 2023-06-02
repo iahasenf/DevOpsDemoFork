@@ -45,6 +45,29 @@ public class ToDoControllerTest {
 
     }
 
-    
+    @Test
+    public void testCreateTodo() {
+        ToDoController controller = new ToDoController();
+        ToDo todo = new ToDo(1, "Test Todo", "This is a test todo");
+
+        controller.createTodo(todo);
+        ToDo createdTodo = controller.getTodo(1);
+
+        Assertions.assertEquals(1, createdTodo.getId());
+        Assertions.assertEquals("Test Todo", createdTodo.getTitle());
+        Assertions.assertEquals("This is a test todo", createdTodo.getDescription());
+
+    }
+
+    @Test
+    public void testDeleteTodo() {
+        ToDoController controller = new ToDoController();
+        controller.init(); 
+
+        ToDo deletedTodo = controller.deleteTodo(3);
+
+        Assertions.assertEquals(3, deletedTodo.getId());
+        Assertions.assertNull(controller.getTodo(3));
+    }
 
 }
