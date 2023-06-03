@@ -14,4 +14,12 @@ public class ToDoTest {
         assertEquals(1, toDo1.getId());
     }
     
+    @Test
+    public void testEmptyConstructor() {
+        ToDo todo = new ToDo();
+
+        assertEquals(0, todo.getId());
+        assertEquals(null, todo.getTitle());
+        assertEquals(null, todo.getDescription());
+    }
 }
