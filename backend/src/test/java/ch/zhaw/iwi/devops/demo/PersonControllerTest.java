@@ -21,7 +21,7 @@ public class PersonControllerTest {
         Assertions.assertEquals(expectedName, person.getName());
     }
 
-    /* 
+    
     @Test
     public void testGetAllPerson() {
         
@@ -87,5 +87,5 @@ public class PersonControllerTest {
         Assertions.assertEquals(id, deletedPerson.getId());
         Assertions.assertNull(retrievedPerson);
     }
-    */
+    
 }
