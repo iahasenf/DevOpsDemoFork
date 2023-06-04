@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class PersonControllerTest {
     
-    /* 
+    
     @Test
     public void getPersonTest() {
         PersonController personController = new PersonController();
@@ -21,6 +21,7 @@ public class PersonControllerTest {
         Assertions.assertEquals(expectedName, person.getName());
     }
 
+    /* 
     @Test
     public void testGetAllPerson() {
         
